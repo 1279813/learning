@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <p>currentTime1--{{currentTime1()}}</p>
+        <p>currentTime2--{{currentTime2}}</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.min.js"></script>
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                message: "Hello,Vue!"
+            },
+            methods: {
+                currentTime1: function () {
+                    return Date.now();  // 返回一个时间戳
+                }
+            },
+            computed: { // 计算属性: methods，computed方法名不能重名，重名之后，只会调用methods的方法
+                currentTime2: function () {
+                    this.message; // 只要内部的数据发生改变则会清除原有缓存，重新计算并缓存
+                    return Date.now();  // 返回一个时间戳
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

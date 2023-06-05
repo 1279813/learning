@@ -1,0 +1,26 @@
+{
+  "name": "Lin YuFeng",
+  "url": "https://www.baidu.com/",
+  "email":"linyufeng2005@gmail.com",
+  "page": 1,
+  "isNonProfit": true,
+  "address": {
+    "street": "广州",
+    "city": "广东",
+    "country": "中国"
+  },
+  "links": [
+    {
+      "name": "语雀",
+      "url": "https://www.yuque.com/nizhegechouloudetuboshu/library"
+    },
+    {
+      "name": "subeiLY",
+      "url": "https://blog.csdn.net/m0_46153949"
+    },
+    {
+      "name": "百度",
+      "url": "https://www.baidu.com/"
+    }
+  ]
+}

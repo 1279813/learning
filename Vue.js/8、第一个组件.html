@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <!-- 创建一个mytmp组件的实例,传递给组件中的值：props -->
+        <mytmp v-for="item in items" v-bind:value="item"></mytmp>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.min.js"></script>
+    <script>
+        // 定义一个名为mytmp的新组件
+        Vue.component("mytmp", {
+            // "props"，类似于一个自定义attribute。这个props名为value
+            props: ['value'],
+            template: '<li>{{value}}</li>'
+        });
+
+        var app = new Vue({
+            el: "#app",
+            data: {
+                items: ["java", "前端", "Android"]
+            }
+        });
+    </script>
+
+</body>
+
+</html>
